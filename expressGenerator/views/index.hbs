@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<h4>Owner : {{name}}</h4>
+<br>
+{{#each values}}
+<h4>Sub_Owner : {{this}} &nbsp Index_Value : {{@index}}</h4>
+{{/each}}
+<br>
+<h1>CustomerName :{{person.name}}<br>Comment : {{person.comments.comment}} <br> Date : {{person.comments.date}}</h1>
+{{!-- {{#with person}}
+<h1>CustomerName :{{name}}</h1>
+{{#with comments}}
+<h1>Comment : {{comment}} <br> Date : {{date}}</h1>
+{{/with}}
+{{/with}} --}}
+<br>
+{{#if person.admin}} 
+<h4 style="color:green">You're ADMIN</h4>
+{{else}}
+<h4 style="color: red;">You're a Normal_User</h4>
+{{/if}}
